@@ -1,0 +1,86 @@
+🚀 Panduan Penerapan Situs Web
+===========================
+
+📋 Persiapan:
+Pastikan Anda sudah memiliki direktori dist/ — ini berisi build final dari situs web Anda
+
+💡 Terapkan ke Platform Cloud (Direkomendasikan):
+
+🌟 Vercel (vercel.com) – Paling Mudah
+1. Kunjungi vercel.com dan daftar
+2. Klik "New Project"
+3. Pilih "Browse All Templates" → "Static"
+4. Seret dan jatuhkan folder dist/ ke area unggah
+5. Masukkan nama proyek, klik "Deploy"
+6. Dapatkan URL HTTPS gratis dalam beberapa menit!
+
+☁️ Cloudflare Pages (pages.cloudflare.com) – Paling Cepat
+1. Kunjungi pages.cloudflare.com dan masuk
+2. Klik "Create a project" → "Upload assets"
+3. Zip folder dist/
+4. Unggah file zip
+5. Tetapkan nama proyek, klik "Deploy site"
+6. Nikmati akselerasi CDN global!
+
+🔥 Netlify (netlify.com) – Ramah Pengguna
+1. Kunjungi netlify.com dan daftar
+2. Seret dan jatuhkan folder dist/ ke area unggah beranda
+3. Tunggu hingga unggahan selesai
+4. Anda akan mendapatkan domain acak (dapat disesuaikan di pengaturan)
+
+📘 GitHub Pages (pages.github.com) – Gratis & Andal
+1. Buat repositori baru di GitHub
+2. Unggah isi folder dist/ ke repo
+3. Pergi ke Pengaturan repositori → Pages
+4. Pilih "Deploy from a branch" → cabang utama
+5. Akses situs Anda di username.github.io/nama-repositori
+
+---
+
+🔧 Penerapan Lanjutan (Untuk Pengembang):
+
+Penerapan Otomatis Berbasis Git
+1. Dorong seluruh proyek (termasuk kode sumber) ke GitHub/GitLab
+2. Hubungkan repo Anda dengan Vercel/Netlify
+3. Konfigurasikan pengaturan build:
+   - Perintah build: npm run build
+   - Direktori publikasi: dist
+   - Versi Node.js: 16.x atau lebih tinggi
+4. Setiap dorongan akan secara otomatis memicu build & penerapan
+
+Penerapan Server Tradisional
+Jika Anda memiliki server sendiri:
+1. Unggah semua file di dalam direktori dist/ ke root web server Anda
+2. Pastikan server mendukung hosting file statis
+3. Akses situs web Anda melalui domain Anda
+
+---
+
+💰 Info Harga:
+- Vercel: Paket gratis cukup untuk penggunaan pribadi
+- Cloudflare Pages: Sepenuhnya gratis, tanpa batas
+- Netlify: Paket gratis mencakup 100GB bandwidth/bulan
+- GitHub Pages: Sepenuhnya gratis, 100GB bandwidth/bulan
+
+---
+
+🎯 Rekomendasi:
+- Pemula: Vercel atau Netlify (unggah seret dan lepas)
+- Fokus kecepatan: Cloudflare Pages
+- Proyek jangka panjang: GitHub Pages
+- Pengembang: Penerapan Otomatis Berbasis Git
+
+---
+
+⚡ Tips:
+- Semua platform menyediakan sertifikat HTTPS gratis
+- Anda dapat mengikat domain kustom (beberapa memerlukan paket berbayar)
+- Setelah penerapan, uji situs web Anda di berbagai perangkat
+
+---
+
+🆘 Pemecahan Masalah:
+1. Pastikan Anda mengunggah isi dari dist/, bukan seluruh proyek
+2. Periksa bahwa index.html ada di direktori root
+3. Tinjau log kesalahan di platform hosting
+4. Pastikan semua file terunggah dengan benar
