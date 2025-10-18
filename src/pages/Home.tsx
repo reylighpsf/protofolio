@@ -71,7 +71,7 @@ export default function HomePage() {
                   Download CV
                 </Button>
                 <Button variant="outline" className="bg-transparent border-blue-600 text-blue-600 hover:bg-blue-50">
-                  View Projects
+                  Liat Projects
                 </Button>
               </div>
             </div>
