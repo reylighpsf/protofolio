@@ -26,7 +26,7 @@ export default function Hero() {
             
             <p className="text-xl text-white/70 max-w-2xl">
               Mahasiswa Teknik Informatika Universitas Negeri Surabaya semester 5 
-              yang sedang menjalani magang. Berpengalaman dalam pengembangan web 
+              yang sedang menjalani magang. Berpengetahuan dalam pengembangan web 
               dan teknologi modern.
             </p>
 
