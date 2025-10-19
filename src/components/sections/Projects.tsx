@@ -34,11 +34,11 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-b from-gray-800 to-gray-900 relative overflow-hidden"
+      className="py-20 bg-gradient-to-b from-gray-800 to-gray-900 relative overflow-hidden scroll-mt-20"
     >
-      {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+      {/* Background Blur Effects */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
@@ -49,13 +49,13 @@ export default function Projects() {
               Unggulan
             </span>
           </h2>
-          <p className="text-xl text-white/60 max-w-2xl mx-auto">
+          <p className="text-lg text-white/60 max-w-2xl mx-auto">
             Kumpulan karya terbaru saya yang menampilkan keterampilan dan kreativitas saya
           </p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <a
               key={project.id}
@@ -64,7 +64,7 @@ export default function Projects() {
               rel="noopener noreferrer"
               className="group relative bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 overflow-hidden hover:border-white/20 transition-all duration-500 transform hover:-translate-y-4 cursor-pointer block"
             >
-              {/* Project Image with Overlay */}
+              {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={project.image}
@@ -73,14 +73,14 @@ export default function Projects() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
 
-                {/* Category Badge */}
+                {/* Category */}
                 <div className="absolute top-4 left-4">
                   <span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs font-medium border border-cyan-500/30">
                     {project.category}
                   </span>
                 </div>
 
-                {/* Hover Action */}
+                {/* Hover Button */}
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <Button
                     size="sm"
@@ -91,7 +91,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Project Content */}
+              {/* Content */}
               <div className="p-6">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                   {project.title}
@@ -112,7 +112,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* Action Buttons */}
+                {/* Buttons */}
                 <div className="flex gap-2">
                   {project.demoUrl && (
                     <a
