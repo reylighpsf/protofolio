@@ -48,12 +48,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Optional: garis pemisah halus */}
         <div className="mt-6 border-t border-white/10"></div>
 
-        {/* Optional: Credit kecil */}
         <div className="text-center mt-4 text-xs text-white/40">
-          Built with ❤️ using React & Tailwind CSS
+          Berharap, gagal, ulang lagi
         </div>
       </div>
     </footer>
