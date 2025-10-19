@@ -27,6 +27,7 @@ const esbuildOpts = {
   loader: {
     '.html': 'copy',
     '.png': 'file',
+    '.pdf': 'file',
   },
   plugins: [
     stylePlugin({
