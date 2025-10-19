@@ -2,6 +2,7 @@
  * Sidebar Component - Navigation sidebar with profile photo and menu
  */
 import { Home, User, Code, FolderOpen, Mail, GraduationCap } from 'lucide-react';
+import photoprofilenormal from '../../assets/images/profilesaya.png';
 
 export default function Sidebar() {
   const navigation = [
@@ -20,7 +21,7 @@ export default function Sidebar() {
           {/* Profile Photo - Formal Circle */}
           <div className="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-cyan-400/30 overflow-hidden shadow-2xl">
             <img 
-              src="https://pub-cdn.sider.ai/u/U09GHA636ZJ/web-coder/68f4aa8607e60d14b9b2886d/resource/f1328727-2fc6-48ab-807e-3359644fab06.jpg" 
+              src={photoprofilenormal}
               alt="Muhammad Fathur Rochman - Formal Photo"
               className="w-full h-full object-cover"
             />

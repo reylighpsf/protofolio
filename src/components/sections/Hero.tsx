@@ -3,7 +3,7 @@
  */
 import { Button } from '../../components/ui/button';
 import { Download, ArrowRight, Sparkles } from 'lucide-react';
-
+import photoprofile from '../../assets/images/profilesayautama.png';
 export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-gray-900 to-gray-800">
@@ -61,10 +61,10 @@ export default function Hero() {
 
           {/* Konten Kanan - Foto Profil Kasual (lebar 1/3) */}
           <div className="lg:col-span-1 flex justify-center">
-            <div className="w-64 h-64 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
-              <img 
-                src="https://pub-cdn.sider.ai/u/U09GHA636ZJ/web-coder/68f4aa8607e60d14b9b2886d/resource/ca939f42-8813-4fb5-aa22-66ef6ee7cb4f.jpg" 
-                alt="Muhammad Fathur Rochman - Foto Kasual" 
+            <div className="w-250 h-2500 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
+              <img
+                src={photoprofile}
+                alt="Muhammad Fathur Rochman - Foto Kasual"
                 className="w-full h-full object-cover"
               />
             </div>
