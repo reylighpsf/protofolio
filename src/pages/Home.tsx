@@ -5,6 +5,7 @@
 import Sidebar from '../components/layout/Sidebar';
 import Hero from '../components/sections/Hero';
 import About from '../components/sections/About';
+import Education from '../components/sections/Education';
 import Skills from '../components/sections/Skills';
 import Projects from '../components/sections/Projects';
 import Contact from '../components/sections/Contact';
@@ -45,6 +46,9 @@ export default function Home() {
           </section>
           <section id="about">
             <About />
+          </section>
+          <section id="education">
+            <Education />
           </section>
           <section id="skills">
             <Skills />

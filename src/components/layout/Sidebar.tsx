@@ -2,7 +2,7 @@
  * Sidebar Component - Responsive navigation sidebar with floating toggle button
  */
 import { useState } from 'react';
-import { Home, User, Code, FolderOpen, Mail, GraduationCap, Menu, X } from 'lucide-react';
+import { Home, User, GraduationCap, Code, FolderOpen, Mail, Menu, X } from 'lucide-react';
 import photoprofilenormal from '../../assets/images/profilesaya.png';
 
 export default function Sidebar() {
@@ -11,6 +11,7 @@ export default function Sidebar() {
   const navigation = [
     { name: 'Home', href: '#home', icon: Home },
     { name: 'About', href: '#about', icon: User },
+    { name: 'Education', href: '#education', icon: GraduationCap },
     { name: 'Skills', href: '#skills', icon: Code },
     { name: 'Projects', href: '#projects', icon: FolderOpen },
     { name: 'Contact', href: '#contact', icon: Mail },
