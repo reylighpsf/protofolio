@@ -9,7 +9,6 @@ import Education from '../components/sections/Education';
 import Skills from '../components/sections/Skills';
 import Projects from '../components/sections/Projects';
 import Contact from '../components/sections/Contact';
-import Footer from '../components/layout/Footer';
 import Header from '../components/layout/Header';
 import { useSmoothScroll, useScrollAnimation } from '../hooks/useSmoothScroll';
 
@@ -61,9 +60,6 @@ export default function Home() {
           </section>
         </main>
       </div>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }
