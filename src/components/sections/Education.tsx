@@ -19,15 +19,13 @@ export default function Education() {
       ]
     },
     {
-      degree: "SMA Negeri 1 Surabaya",
-      institution: "SMA Negeri 1 Surabaya",
-      period: "2018 - 2021",
+      degree: "SMA Negeri 2 Magetan",
+      institution: "SMA Negeri 1 Magetan",
+      period: "2019 - 2022",
       status: "Lulus",
       description: "Jurusan IPA dengan fokus pada matematika dan fisika.",
       achievements: [
         "Nilai rata-rata: 85+",
-        "Juara 2 Olimpiade Matematika Kota",
-        "Ketua OSIS"
       ]
     }
   ];
