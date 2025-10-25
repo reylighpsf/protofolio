@@ -1,6 +1,4 @@
-/**
- * Projects Section - Modern card design with hover effects and gradients
- */
+import { useState } from 'react';
 import { Button } from '../../components/ui/button';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import FindMyWork from '../../assets/images/FindMyWork.AI.png';
@@ -13,6 +11,7 @@ interface Project {
   image: string;
   technologies: string[];
   category: string;
+  categoryAlert: string;
   demoUrl?: string;
   githubUrl?: string;
 }
@@ -22,36 +21,37 @@ const projects: Project[] = [
     id: 1,
     title: 'FindMyWork.AI',
     description:
-      'Platform pencocokan pekerjaan berbasis AI yang menganalisis CV pengguna untuk merekomendasikan lowongan kerja paling relevan menggunakan OpenAI dan algoritma pencocokan data canggih. Fitur-fiturnya meliputi pengunggahan CV, analisis berbasis AI, dan hasil pencarian kerja yang dipersonalisasi.',
+      'Platform pencocokan pekerjaan berbasis AI yang menganalisis CV pengguna untuk merekomendasikan lowongan kerja paling relevan menggunakan OpenAI dan algoritma pencocokan data canggih.',
     image: FindMyWork,
     technologies: ['Next.js', 'FastAPI', 'PostgreSQL', 'OpenAI API', 'Google Cloud Storage'],
     category: 'AI & Full Stack',
+    categoryAlert: '',
     demoUrl: 'https://findmywork.cloud',
     githubUrl: 'https://github.com/reylighpsf/FindMyWork.ai',
   },
-
-    
   {
     id: 2,
     title: 'Website Percetakan dan Toko Alat Tulis',
-    description: 
-      'Website percetakan modern dan toko alat tulis online yang mendukung pemesanan produk, layanan cetak kustom, dan checkout online. Fitur termasuk katalog produk interaktif, filter kategori, keranjang belanja, preview cetak, manajemen stok, dan dashboard admin untuk pengelolaan produk serta pesanan.',
-    image: Percetakan, 
+    description:
+      'Website percetakan modern dan toko alat tulis online yang mendukung pemesanan produk, layanan cetak kustom, dan checkout online.',
+    image: Percetakan,
     technologies: ['Next.js', 'Laravel', 'Postgresql', 'Tailwind CSS', 'Vercel', 'Midtrans / Stripe'],
-    category: 'E-Commerce & Full Stack',
+    category: '',
+    categoryAlert: 'Pengembangan!',
     demoUrl: 'https://github.com/reylighpsf/TokoAlatTulisOnline',
     githubUrl: 'https://github.com/reylighpsf/TokoAlatTulisOnline',
-  }
-
+  },
 ];
 
 export default function Projects() {
+  const [hoveredAlert, setHoveredAlert] = useState<string>('');
+
   return (
     <section
       id="projects"
       className="py-20 bg-gradient-to-b from-gray-800 to-gray-900 relative overflow-hidden scroll-mt-20"
     >
-      {/* Background Blur Effects */}
+      {/* Background Effects */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
 
@@ -77,6 +77,10 @@ export default function Projects() {
               href={project.demoUrl || project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onMouseEnter={() => {
+                if (project.categoryAlert) setHoveredAlert(project.categoryAlert);
+              }}
+              onMouseLeave={() => setHoveredAlert('')}
               className="group relative bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 overflow-hidden hover:border-white/20 transition-all duration-500 transform hover:-translate-y-4 cursor-pointer block"
             >
               {/* Project Image */}
@@ -88,12 +92,14 @@ export default function Projects() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
 
-                {/* Category */}
-                <div className="absolute top-4 left-4">
-                  <span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs font-medium border border-cyan-500/30">
-                    {project.category}
-                  </span>
-                </div>
+                {/* Category Tag */}
+                {project.category && (
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs font-medium border border-cyan-500/30">
+                      {project.category}
+                    </span>
+                  </div>
+                )}
 
                 {/* Hover Button */}
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -111,9 +117,7 @@ export default function Projects() {
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-white/60 mb-4 line-clamp-2 text-sm">
-                  {project.description}
-                </p>
+                <p className="text-white/60 mb-4 line-clamp-2 text-sm">{project.description}</p>
 
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -164,6 +168,15 @@ export default function Projects() {
             </a>
           ))}
         </div>
+
+        {/* Centered Hover Alert */}
+        {hoveredAlert && (
+          <div className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+            <div className="bg-red-600 text-cyan-100 px-6 py-3 rounded-full text-sm font-semibold border border-cyan-400/40 shadow-lg animate-bounce">
+              {hoveredAlert}
+            </div>
+          </div>
+        )}
 
         {/* View More Button */}
         <div className="text-center mt-12">
