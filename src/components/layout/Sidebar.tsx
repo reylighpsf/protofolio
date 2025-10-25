@@ -68,9 +68,6 @@ export default function Sidebar() {
             <h1 className="text-2xl font-bold text-white mb-2">
               Muhammad Fathur Rochman
             </h1>
-            <div className="text-cyan-400 text-sm font-medium mb-1">
-              Pengembang Web
-            </div>
             <div className="text-white/60 text-sm flex items-center justify-center gap-1">
               <GraduationCap size={14} />
               UNESA - Semester 5

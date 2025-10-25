@@ -4,6 +4,7 @@
 import { Button } from '../../components/ui/button';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import FindMyWork from '../../assets/images/FindMyWork.AI.png';
+import Percetakan from '../../assets/images/PercetakanAkbar.png';
 
 interface Project {
   id: number;
@@ -21,13 +22,27 @@ const projects: Project[] = [
     id: 1,
     title: 'FindMyWork.AI',
     description:
-      'AI-powered job matching platform that analyzes user CVs to recommend the most relevant job opportunities using OpenAI and advanced data matching algorithms. Features include CV upload, AI-driven analysis, and personalized job search results.',
+      'Platform pencocokan pekerjaan berbasis AI yang menganalisis CV pengguna untuk merekomendasikan lowongan kerja paling relevan menggunakan OpenAI dan algoritma pencocokan data canggih. Fitur-fiturnya meliputi pengunggahan CV, analisis berbasis AI, dan hasil pencarian kerja yang dipersonalisasi.',
     image: FindMyWork,
     technologies: ['Next.js', 'FastAPI', 'PostgreSQL', 'OpenAI API', 'Google Cloud Storage'],
     category: 'AI & Full Stack',
     demoUrl: 'https://findmywork.cloud',
     githubUrl: 'https://github.com/reylighpsf/FindMyWork.ai',
   },
+
+    
+  {
+    id: 2,
+    title: 'Website Percetakan dan Toko Alat Tulis',
+    description: 
+      'Website percetakan modern dan toko alat tulis online yang mendukung pemesanan produk, layanan cetak kustom, dan checkout online. Fitur termasuk katalog produk interaktif, filter kategori, keranjang belanja, preview cetak, manajemen stok, dan dashboard admin untuk pengelolaan produk serta pesanan.',
+    image: Percetakan, 
+    technologies: ['Next.js', 'Laravel', 'Postgresql', 'Tailwind CSS', 'Vercel', 'Midtrans / Stripe'],
+    category: 'E-Commerce & Full Stack',
+    demoUrl: 'https://github.com/reylighpsf/TokoAlatTulisOnline',
+    githubUrl: 'https://github.com/reylighpsf/TokoAlatTulisOnline',
+  }
+
 ];
 
 export default function Projects() {
